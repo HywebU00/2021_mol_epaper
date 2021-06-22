@@ -75,6 +75,8 @@ body {
         }
         +.center_block {
             max-width: calc(100% - 300px);
+            padding-right: 30px;
+            box-sizing:border-box;
         }
         @include screen('tablet') {
             flex: auto;
