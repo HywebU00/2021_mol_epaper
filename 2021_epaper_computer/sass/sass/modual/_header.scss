@@ -1,0 +1,148 @@
+//header
+.header {
+    position: relative;
+    z-index: 99;
+    padding: 0;
+    background-image: url('../images/headerbg.png');
+    background-repeat: no-repeat;
+    background-position: right 28px;
+    background-color: #fbfbfb;
+    @extend %clearfix;
+    @include screen('tablet'){
+
+    }
+    @include screen('mobile') {
+        position: fixed;
+        width: 100%;
+        
+    }
+    
+    >.container {
+        // max-width: $container-max;
+        width: 100%;
+        overflow: visible;
+        position: relative; // menu
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 125px;
+    }
+    .explain {
+        background: rgb(53, 151, 193);
+        background: linear-gradient(135deg, rgba(53, 151, 193, 1) 0%, rgba(7, 75, 155, 1) 37%);
+        color: #fff;
+        padding: 4px 5px;
+        text-align: right;
+        flex: auto;
+        flex-basis: 100%;
+        font-size: 0.813em;
+        align-self: flex-start;
+        font-size: 0.875em;
+        a {
+            color: #fff;
+            padding: 0 2px;
+            text-decoration: underline;
+            &:hover {
+                color: $lightColor;
+            }
+        }
+    }
+    h1 {
+        flex: none;
+        flex-basis: 208px;
+        width: 208px;
+        height: 60px;
+        margin: -30px 50px 0 20px;
+        padding: 0;
+        box-sizing: border-box;
+        a {
+            display: inline-block;
+        }
+        img {
+            width: 208px;
+            height: 60px;
+        }
+    }
+    .title {
+        font-size: 2em;
+        flex: auto;
+        // font-weight: bold;
+        text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 8px #fff;
+        margin-top: -30px;
+    }
+    // 導覽列
+    .navigation {
+        @include screen('mobile') {
+            display: none;
+        }
+        &.have_language {
+            padding-right: 160px;
+        }
+        @extend %clearfix;
+        overflow: hidden;
+        // width: 100%;
+        // margin-bottom: .5em;
+        box-sizing:border-box;
+        display: flex;
+        //shuya 1090826
+        .navlist {
+            flex: 1 1 auto;
+            margin: .1em .5em 0 0;
+            ul {
+                padding: 0;
+                margin: 0;
+                font-size: .875em;
+                list-style: none;
+                display: flex;
+                justify-content: flex-end;
+            }
+            li {
+                flex: 0 0 auto;
+                a {
+                    display: block;
+                    padding: .5em;
+                    text-decoration: none;
+                    @include aSetting_nocolor;
+                }
+            }
+        }
+        .language {
+            position: absolute;
+            right: 15px;
+            top: .35em;
+            font-size: .75em;
+        }
+    }
+}
+// header fix
+.header.fixed {
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, .5) 0 0 25px;
+    background: rgba(0, 0, 0, .75);
+    z-index: 999;
+    @include screen('mobile') {
+        background: #FFF;
+    }
+    .menu {
+        >ul {
+            >li {
+                >a {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+    .megamenu {
+        >ul {
+            >li {
+                >a {
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}

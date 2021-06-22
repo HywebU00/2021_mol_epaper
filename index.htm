@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>中華民國勞動部全球資訊網 電子報</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <style>
+    .num {
+        width: 12%
+    }
+    body {
+        counter-reset: num
+    }
+    .demo_wrap {
+        max-width: 1000px;
+        margin: 0em auto 1em;
+        padding: 15px 15px 3em;
+        clear: both;
+        background: #FFF;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .demo_wrap h1 {
+        flex: none;
+        flex-basis: 300px;
+        margin: 0px;
+        width: 300px;
+        margin-right: 1em
+    }
+    @media screen and (max-width:545px) {
+        .demo_wrap h1 {
+            max-width: 100%;
+            float: none;
+            text-align: center
+        }
+    }
+    .demo_wrap h1 img {
+        width: 300px
+    }
+    .btn_grp {
+        flex: auto;
+        text-align: right;
+    }
+
+    @media screen and (max-width:545px) {
+        .btn_grp {
+            text-align: center;
+        }
+    }
+    .btn {
+        background: #e0e0e0;
+        border: 1px solid #e0e0e0;
+        color: #222;
+        text-shadow: none;
+        padding: 15px;
+        text-decoration: none;
+    }
+    .table_wrapper {
+        clear: both;
+        flex: auto;
+        flex-basis: 100%;
+        border-top: 1px solid #ccc;
+    }
+    table {
+        margin-bottom: 1em;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    table th {
+        background-color: #074b9b;
+        color: #fff;
+        border: #DDD 1px solid;
+        text-align: center;
+        white-space: nowrap;
+        padding: .8em .5em;
+    }
+    table td {
+        border: #ddd 1px solid;
+        word-break: break-all;
+        padding: 0.8em .5em;
+        text-align: left;
+    }
+    table caption {
+        text-align: left;
+        font-weight: bold;
+        font-size: 1.25em;
+        padding: .5em 0;
+        color: #ff5050
+    }
+    tbody tr td:first-child:before {
+        counter-increment: num;
+        display: block;
+        text-align: center;
+        content: counters(num, ".") " "
+    }
+    tbody tr td:nth-child(2) {
+        width: 35%
+    }
+    tbody tr.interval {
+        border-top: 3px solid #ccc;
+    }
+    
+    </style>
+</head>
+
+<body>
+    <div class="demo_wrap">
+        <h1><img src="logo.svg" alt=""></h1>
+        <div class="btn_grp">
+            <a href="https://github.com/HywebU00/2021_mol_c" class="btn">切版檔案請按此下載</a>
+        </div>
+        <div class="table_wrapper">
+            <!-- hyUI 標準頁面 -->
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr class="interval">
+                        <td></td>
+                        <td>電腦版</td>
+                        <td><a href="2021_epaper_computer/epaper.htm">2021_epaper_computer/epaper.ht</a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>mail版</td>
+                        <td><a href="2021_epaper_mail/epaper.html">2021_epaper_mail/epaper.html</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </script>
+</body>
+
+</html>
