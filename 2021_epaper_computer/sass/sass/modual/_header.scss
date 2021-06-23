@@ -8,15 +8,11 @@
     background-position: right 28px;
     background-color: #fbfbfb;
     @extend %clearfix;
-    @include screen('tablet'){
-
-    }
+    @include screen('tablet') {}
     @include screen('mobile') {
         position: fixed;
         width: 100%;
-        
     }
-    
     >.container {
         // max-width: $container-max;
         width: 100%;
@@ -27,6 +23,22 @@
         align-items: center;
         flex-wrap: wrap;
         height: 125px;
+        @media(max-width: 400px) {
+            display: block;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgb(251, 251, 251);
+            background: linear-gradient(90deg, rgba(251, 251, 251, 0.80015756302521) 32%, rgba(251, 251, 251, 0) 85%);
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
     }
     .explain {
         background: rgb(53, 151, 193);
@@ -39,6 +51,8 @@
         font-size: 0.813em;
         align-self: flex-start;
         font-size: 0.875em;
+        position: relative;
+        z-index: 1;
         a {
             color: #fff;
             padding: 0 2px;
@@ -53,15 +67,32 @@
         flex-basis: 208px;
         width: 208px;
         height: 60px;
-        margin: -30px 50px 0 20px;
+        margin: -30px 40px 0 20px;
         padding: 0;
         box-sizing: border-box;
+        position: relative;
+        z-index: 1;
         a {
             display: inline-block;
         }
         img {
             width: 208px;
             height: 60px;
+        }
+        @media(max-width: 500px) {
+            margin: -30px 20px 0 20px;
+            flex-basis: 180px;
+            width: 180px;
+            height: 52px;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        @media(max-width: 400px) {
+            width: 150px;
+            height: 43px;
+            margin: 10px auto;
         }
     }
     .title {
@@ -70,6 +101,16 @@
         // font-weight: bold;
         text-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 8px #fff;
         margin-top: -30px;
+        position: relative;
+        z-index: 1;
+        @media(max-width: 500px) {
+            font-size: 1.75em;
+        }
+        @media(max-width: 400px) {
+            font-size: 1.625em;
+            margin: 0;
+            text-align: center;
+        }
     }
     // 導覽列
     .navigation {

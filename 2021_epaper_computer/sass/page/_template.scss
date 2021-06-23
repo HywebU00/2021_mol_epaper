@@ -63,6 +63,9 @@ body {
         flex: auto;
         max-width: 100%;
         // overflow: hidden;
+        @include screen('tablet') {
+            margin: 0 10px;
+        }
     }
     .left_block {
         flex: 0 0 260px;
@@ -76,7 +79,7 @@ body {
         +.center_block {
             max-width: calc(100% - 300px);
             padding-right: 30px;
-            box-sizing:border-box;
+            box-sizing: border-box;
         }
         @include screen('tablet') {
             flex: auto;
@@ -85,11 +88,13 @@ body {
             margin-right: 0;
             display: flex;
             padding-bottom: 20px;
+            flex-wrap: wrap;
             +.center_block {
                 max-width: 100%;
+                padding: 0;
             }
         }
-        @media(max-width: 500px){
+        @media(max-width: 500px) {
             flex-wrap: wrap;
         }
     }
